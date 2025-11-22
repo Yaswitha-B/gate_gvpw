@@ -1,0 +1,9 @@
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    username VARCHAR(100) NOT NULL,
+    role VARCHAR(20) NOT NULL DEFAULT 'student',
+    keys INT NOT NULL DEFAULT 0,
+    points INT NOT NULL DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT now()
+);

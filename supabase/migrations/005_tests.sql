@@ -1,0 +1,7 @@
+CREATE TABLE tests (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    score INT NOT NULL DEFAULT 0,
+    keys_earned INT NOT NULL DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT now()
+);
